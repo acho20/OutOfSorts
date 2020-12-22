@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.ArrayList;
 
 public class Sorts{
   /**Bubble sort of an int array.
@@ -35,5 +36,18 @@ public class Sorts{
       data[index] = valueholder;
     }
   }
+  public static void insertionSort(int[] data){
+    int n = data.length;
+      for (int i = 1; i < n; ++i) {
+        int x = data[i];
+        int j = i - 1;
+
+        while (j >= 0 && data[j] > x) {
+          data[j + 1] = data[j];
+          j = j - 1;
+        }
+        data[j + 1] = x; 
+      }
+    }
 
 }
