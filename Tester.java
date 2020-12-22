@@ -9,8 +9,9 @@ public class Tester{
       test[i] = rand.nextInt();
     }
     int[] test2 = Arrays.copyOf(test, test.length);
-    Sorts.bubbleSort(test);
+    Sorts.insertionSort(test);
     Arrays.sort(test2);
+    System.out.println(Arrays.toString(test));
     System.out.println(Arrays.equals(test, test2));
   }
 
